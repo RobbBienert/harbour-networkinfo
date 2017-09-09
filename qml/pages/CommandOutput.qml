@@ -31,8 +31,11 @@ Page {
 	// This function is used to switch the command output appropriate
 	// to the screen orientation.
 	function showHideResult() {
-		resultTable.visible = header.visible = page.orientation === Orientation.Landscape
-		result.visible = page.orientation === Orientation.Portrait
+		page.isLandscape = (page.orientation | Orientation.LandscapeMask) === Orientation.LandscapeMask
+		page.isPortrait = (page.orientation | Orientation.PortraitMask) === Orientation.PortraitMask
+
+		resultTable.visible = header.visible = page.isLandscape
+		result.visible = page.isPortrait
 	}
 
     SilicaFlickable {
