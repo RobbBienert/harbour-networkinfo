@@ -17,10 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifdef QT_QML_DEBUG
-#include <QtQuick>
-#endif
-
+#include <QtQuick>	// need it for qmlRegisterType - not only in debug mode
 #include <sailfishapp.h>
 #include "ifconfig.h"
 #include "hostinfo.h"
