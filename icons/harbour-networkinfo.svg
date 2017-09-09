@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<svg width="256" height="256" viewBox="0 0 256 256"
+	version="1.1" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>harbour-networkinfo</title>
+<desc>SailfishOS icon for app harbour-networks</desc>
+<metadata>
+	<rdf:RDF>
+		<cc:Work rdf:about="">
+			<dc:format>image/svg+xml</dc:format>
+			<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+			<dc:title>harbour-networkinfo</dc:title>
+			<dc:date>2017-09-09</dc:date>
+			<dc:creator><cc:Agent>
+				<dc:title>Robert Bienert</dc:title>
+			</cc:Agent></dc:creator>
+			<dc:publisher><cc:Agent>
+				<dc:title>Robert Bienert</dc:title>
+			</cc:Agent></dc:publisher>
+			<dc:rights><cc:Agent>
+				<dc:title>Copyright © 2017 Robert Bienert</dc:title>
+			</cc:Agent></dc:rights>
+			<cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+		</cc:Work>
+		<cc:License rdf:about="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+			<cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+			<cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+			<cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+			<cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+			<cc:prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse" />
+			<cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+			<cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+		</cc:License>
+	</rdf:RDF>
+</metadata>
+<defs>
+	<linearGradient id="rainbow" gradientUnits="objectBoundingBox" x1="0%" y="100%" x2="100%" y2="0%" gradientTransform="rotate(45)">
+		<stop offset="0%" stop-color="blue"/>
+		<stop offset="100%" stop-color="#60a1e1"/>
+	</linearGradient>
+	<radialGradient id="sending" gradientUnits="userSpaceOnUse" cx="128" cy="128" r="128" fx="128" fy="128">
+		<stop offset="0%" stop-opacity="0"/>
+		<stop offset="50%" stop-opacity=".25"/>
+		<stop offset="100%" stop-opacity="1"/>
+	</radialGradient>
+	<g id="Ecke1Kreis">
+		<desc>Ein 3/4-Kreis mit einer Ecke</desc>
+		<path d="M0,0 h128 a128,128 1 1 1 -128,128z"/>
+	</g>
+	<path id="Bogen1" d="M96,128 a32,32 0 0 1 32,-32 a8,8 0 0 0 0,-16 a48,48 0 0 0 -48,48 a8,8 0 0 0 16,0" stroke="black"/>
+	<path id="Bogen2" d="M64,128 a64,64 0 0 1 64,-64 a8,8 0 0 0 0,-16 a80,80 0 0 0 -80,80 a8,8 0 0 0 16,0" stroke="black"/>
+	<path id="Bogen3" d="M32,128 a96,96 0 0 1 96,-96 a8,8 0 0 0 0,-16 a112,112 0 0 0 -112,112 a8,8 0 0 0 16,0" stroke="black"/>
+	<circle id="Knopf" cx="128" cy="128" r="16" stroke="white" fill="#abcdef"/>
+	<g id="RJ45plug">
+		<rect x="0" y="18" width="72" height="30" stroke="#c8def5" stroke-width="4" fill="none"/>
+		<rect x="18" y="0" width="36" height="18" stroke="#c8def5" stroke-width="4" fill="none"/>
+		<path d="M15,33 v15 m6,0 v-15 m6,0 v15 m6,0 v-15 m6,0 v15 m6,0 v-15 m6,0 v15 m6,0 v-15" stroke="#c8def5" stroke-width="4"/>
+	</g>
+</defs>
+<!-- die Vektoren der Grafik -->
+<g id="icon">
+	<g id="frame" transform="translate(256,256)rotate(180)">
+		<use xlink:href="#Ecke1Kreis" fill="url(#rainbow)"/>
+		<!--
+		<use xlink:href="#Ecke1Kreis" fill="white" fill-opacity=".2"/>
+		-->
+	</g>
+	<g id="wlan" fill="url(#sending)">
+		<use xlink:href="#Bogen1"/>
+		<use xlink:href="#Bogen2"/>
+		<use xlink:href="#Bogen3"/>
+		<use xlink:href="#Knopf"/>
+	</g>
+	<path id="i" d="M116,172 v64 a12,12 0 0 0 24,0 v-64 a12,12 0 0 0 -24,0" stroke="white" fill="#abcdef"/>
+	<use xlink:href="#RJ45plug" transform="translate(168,168)"/>
+</g>
+</svg>

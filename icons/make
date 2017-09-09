@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# batch create PNG files from SVG files using inkscape
+#
+# Copyright (C) 2017 Robert Bienert
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# <http://www.gnu.org/licenses/gpl-3.0>
+
+svg2png() {
+	b=`basename "$1" .svg`
+	for s in 86 108 128 256; do
+		inkscape -e "${s}x${s}/$b.png" -w "$s" -h "$s" "$1"
+	done
+}
+
+if [ $# = 0 ]; then
+	for i in *.svg; do
+		svg2png "$i"
+	done
+else
+	svg2png $*
+fi
