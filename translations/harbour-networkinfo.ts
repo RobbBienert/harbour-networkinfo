@@ -12,6 +12,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>This app provides some information of the local networks that your Jolla Phone is connected to. There are also some useful networking tools like &lt;i&gt;ping&lt;/i&gt; included.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Credits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21,10 +33,6 @@
     </message>
     <message>
         <source>See the GNU General Public License for more details.&lt;/font&gt;&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This app provides some information of the local networks that your Jolla Phone is connected to. There are also some useful networking tools like &lt;i&gt;ping&lt;/i&gt; included.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -57,6 +57,12 @@ Page {
                 textFormat: Text.StyledText
             }
 
+			SailTextHeader { text: qsTr("Credits") }
+			SailText {
+				text: qsTr("Swedish translation:") + " <a href=\"https://github.com/eson57\"><font color=\"" + Theme.highlightColor + "\">eson57</font></a>"
+				textFormat: Text.StyledText
+			}
+
             SailTextHeader {
                 text: qsTr("License")
             }

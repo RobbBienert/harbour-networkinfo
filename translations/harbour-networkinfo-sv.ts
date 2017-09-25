@@ -12,6 +12,18 @@
         <translation>Beskrivning</translation>
     </message>
     <message>
+        <source>This app provides some information of the local networks that your Jolla Phone is connected to. There are also some useful networking tools like &lt;i&gt;ping&lt;/i&gt; included.</source>
+        <translation>Denna app tillhandahåller viss information om det lokala nätverk som din Sailfish-enhet är ansluten till. Denna innehåller också några användbara nätverksverktyg, som &lt;i&gt;Ping&lt;/i&gt;.</translation>
+    </message>
+    <message>
+        <source>Credits</source>
+        <translation>Medverkande</translation>
+    </message>
+    <message>
+        <source>Swedish translation:</source>
+        <translation>Svensk översättning:</translation>
+    </message>
+    <message>
         <source>License</source>
         <translation>Licens</translation>
     </message>
@@ -22,10 +34,6 @@
     <message>
         <source>See the GNU General Public License for more details.&lt;/font&gt;&lt;/a&gt;</source>
         <translation>Se GNU General Public License för mer detaljerad info.&lt;/font&gt;&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>This app provides some information of the local networks that your Jolla Phone is connected to. There are also some useful networking tools like &lt;i&gt;ping&lt;/i&gt; included.</source>
-        <translation>Denna app tillhandahåller viss information om det lokala nätverk som din Sailfish-enhet är ansluten till. Denna innehåller också några användbara nätverksverktyg, som &lt;i&gt;Ping&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>

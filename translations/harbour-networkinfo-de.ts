@@ -12,6 +12,18 @@
         <translation>Beschreibung</translation>
     </message>
     <message>
+        <source>This app provides some information of the local networks that your Jolla Phone is connected to. There are also some useful networking tools like &lt;i&gt;ping&lt;/i&gt; included.</source>
+        <translation>Diese App stellt einige Informationen über die lokalen Netze zur Verfügung, mit denen dein Jolla Phone verbunden ist. Es sind außerdem einige nützliche Tools wie &lt;i&gt;ping&lt;/i&gt; enthalten.</translation>
+    </message>
+    <message>
+        <source>Credits</source>
+        <translation>Danke an</translation>
+    </message>
+    <message>
+        <source>Swedish translation:</source>
+        <translation>Swedische Übersetzung:</translation>
+    </message>
+    <message>
         <source>License</source>
         <translation>Lizenz</translation>
     </message>
@@ -22,10 +34,6 @@
     <message>
         <source>See the GNU General Public License for more details.&lt;/font&gt;&lt;/a&gt;</source>
         <translation>Lies die GNU General Public License für weitere Details.&lt;/font&gt;&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>This app provides some information of the local networks that your Jolla Phone is connected to. There are also some useful networking tools like &lt;i&gt;ping&lt;/i&gt; included.</source>
-        <translation>Diese App stellt einige Informationen über die lokalen Netze zur Verfügung, mit denen dein Jolla Phone verbunden ist. Es sind außerdem einige nützliche Tools wie &lt;i&gt;ping&lt;/i&gt; enthalten.</translation>
     </message>
 </context>
 <context>
