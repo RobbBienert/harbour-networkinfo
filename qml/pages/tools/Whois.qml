@@ -22,7 +22,7 @@ Page {
             MenuItem {
                 text: qsTr("Copy IPv4 to Clipboard")
                 onClicked: Clipboard.text = tools.ipv4
-            }
+			}
         }
 
         Column {
@@ -50,10 +50,12 @@ Page {
                     for (var i = 0; i < addrs.length; ++i) {
                         ips.text += addrs[i].family + ': ' + addrs[i].socktype + ' ' + addrs[i].addr + '\n'
 
-                        if (addrs[i].family === 'IPv4' && tools.ipv4.indexOf(addrs[i].family) === -1)
+						if (addrs[i].family === 'IPv4' && addrs[i].socktype === 'TCP') {
                             tools.ipv4 = addrs[i].addr
-                        else if (addrs[i].family === 'IPv6' && tools.ipv6.indexOf(addrs[i].family) === -1)
+						}
+						else if (addrs[i].family === 'IPv6' && addrs[i].socktype === 'TCP') {
                             tools.ipv6 = addrs[i].addr
+						}
                     }
                 }
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
