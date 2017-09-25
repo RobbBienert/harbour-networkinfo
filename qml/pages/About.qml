@@ -42,7 +42,7 @@ Page {
             }
 
             SailText {
-                text: "Version 1.0\nCopyright © 2017 Robert Bienert"
+				text: "Version 1.1\nCopyright © 2017 Robert Bienert"
             }
             TextWithLink {
                 text: '<a href="https://github.com/RobbBienert/harbour-networkinfo"><font color="' + Theme.highlightColor + '">Git Repository &amp; Wiki</font></a>'
