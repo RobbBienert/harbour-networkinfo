@@ -1,7 +1,7 @@
 /*
  * Qt-based pipe connection for asynchronous reading
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,6 +38,13 @@ const QString QtPipe::command() const {
 	return _cmd;
 }
 
+void QtPipe::setAltCommand(const QString &cmd) {
+	_altCmd = cmd;
+}
+const QString QtPipe::altCommand() const {
+	return _altCmd;
+}
+
 const QString QtPipe::commandLine() const {
 	return _cmd + ' ' + _args.join(' ');
 }
@@ -59,6 +66,9 @@ bool QtPipe::mergeOutput() const {
 	return _merge;
 }
 
+void QtPipe::addCmdOption(const QString &co) {
+	_args << co;
+}
 
 void QtPipe::addCmdOptions(const QString &co) {
 	_args << co;
@@ -75,6 +85,7 @@ void QtPipe::addCmdFileArg(const QString &fa, const bool quote) {
 }
 
 bool QtPipe::start() {
+	// TODO: Check if _cmd or _altCmd can be started.
 	_pipe.start(_cmd, _args, QIODevice::ReadOnly);
 	return true;
 }

@@ -1,7 +1,7 @@
 /*
  * page for capturing pipe output at once
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +27,7 @@ Page {
     property string toolName: ''
     property string toolCmd: ''
     property var toolCmds: []
+	property var altTools: []
 
 	// This function is used to switch the command output appropriate
 	// to the screen orientation.

@@ -1,7 +1,7 @@
 /*
  * URL command tool
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -124,10 +124,10 @@ Page {
         result.text = ''
         pipe.command = cmd
         if (cmdOpt !== '')
-            pipe.addCmdOptions(cmdOpt)
+			pipe.addCmdOption(cmdOpt)
         if (compress.checked)
-            pipe.addCmdOptions('--compressed')
-        pipe.addCmdOptions(ip.text)
+			pipe.addCmdOption('--compressed')
+		pipe.addCmdOption(ip.text)
         busy.running = pipe.start()
     }
 }

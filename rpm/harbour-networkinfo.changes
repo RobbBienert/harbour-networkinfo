@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Sep 24 2018 Robert Bienert <robertbienert@gmx.net> 1.2-1
+- fixed https://github.com/RobbBienert/harbour-networkinfo/issues/2
+- fixed another bug in the Ping tool regarding the number of pings
+
 * Mon Sep 25 2017 Robert Bienert <robertbienert@gmx.net> 1.1-1
 - added Swedish translation
 - bugfix in the whois page

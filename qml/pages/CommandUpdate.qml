@@ -1,7 +1,7 @@
 /*
  * page for continously capturing pipe output
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,6 +27,7 @@ Page {
     property string toolName: ''
     property string toolCmd: ''
     property var toolCmds: []
+	property var altTools: []
     property string cmdOpt: ''
     property int iterations: 0
     property string iterName: ''
@@ -61,7 +62,7 @@ Page {
                 EnterKey.enabled: text.length > 0 && acceptableInput
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                 EnterKey.onClicked: startPipe()
-                validator: RegExpValidator { regExp: /^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|([0-9a-fA-F\:]+)|([0-9a-zA-Z][0-9a-zA-Z\-\.]+[0-9a-zA-Z])$/ }
+				validator: RegExpValidator { regExp: /^([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|([0-9a-fA-F\:]+)|([0-9a-zA-Z][0-9a-zA-Z\-\.]+[0-9a-zA-Z]+)\s?$/ }
             }
 
             Grid {
@@ -117,21 +118,34 @@ Page {
     }
 
     function startPipe() {
-        var cmd;
+		var cmd, altCmd;
+		var ipv4 = ip.text.indexOf(':') === -1;
 
-        if (toolCmds.length === 0)
+		ip.text = ip.text.trim()
+
+		if (toolCmds.length === 0) {
             cmd = toolCmd
-        else if (toolCmds.length === 1){
+		}
+		else if (toolCmds.length === 1) {
             cmd = toolCmds[0]
         }
         else {
-            cmd = ip.text.indexOf(':') === -1 ? toolCmds[0] : toolCmds[1]
+			cmd = ipv4 ? toolCmds[0] : toolCmds[1]
         }
+
+		if (altTools.length === 1) {
+			pipe.altCommand = altTools[0]
+		}
+		else if (altTools.length === 2) {
+			pipe.altCommand = ipv4 ? altTools[0] : altTools[1]
+		}
 
         result.text = ''
         pipe.command = cmd
-        if (cmdOpt !== '')
-            pipe.addCmdOptions(cmdOpt + ' ' + iter.text)
+		if (cmdOpt !== '') {
+			pipe.addCmdOption(cmdOpt)
+			pipe.addCmdOption(iter.text)
+		}
         pipe.addCmdFileArg(ip.text, false)
         busy.running = pipe.start()
     }

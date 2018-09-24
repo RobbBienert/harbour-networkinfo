@@ -1,7 +1,7 @@
 /*
  * Network Tools
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -50,7 +50,8 @@ Page {
             }
             ToolRouter {
                 name: "Trace Route"
-                tools: ["/usr/sbin/tracepath", "/usr/sbin/tracepath6"]
+				tools: ["/usr/sbin/tracepath", "/usr/sbin/tracepath6"]
+				altTools: ["/usr/bin/traceroute", "/usr/bin/traceroute6"]
                 //toolOpt: '-m'
                 iterations: 30
                 iterName: qsTr("hops")

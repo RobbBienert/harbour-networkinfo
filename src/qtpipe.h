@@ -1,7 +1,7 @@
 /*
  * Qt-based pipe connection for asynchronous reading
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,6 +29,7 @@ class QtPipe : public QObject
 {
 	Q_OBJECT
 	Q_PROPERTY(QString command READ command WRITE setCommand)
+	Q_PROPERTY(QString altCommand READ altCommand WRITE setAltCommand)
 	Q_PROPERTY(QString commandLine READ commandLine)
 	Q_PROPERTY(QString data READ data NOTIFY dataChanged)
 	Q_PROPERTY(bool mergeOutput READ mergeOutput WRITE setMergeOutput)
@@ -39,6 +40,9 @@ public:
 	void setCommand(const QString &cmd);
 	const QString command() const;
 
+	void setAltCommand(const QString &cmd);
+	const QString altCommand() const;
+
 	const QString commandLine() const;
 
 	void setMergeOutput(const bool merge);
@@ -47,6 +51,7 @@ public:
 	const QString data() const;
 	Q_INVOKABLE QVariantMap getDataAsTable();
 
+	Q_INVOKABLE void addCmdOption(const QString &co);
 	Q_INVOKABLE void addCmdOptions(const QString &co);
 	Q_INVOKABLE void addCmdFileArg(const QString &fa, const bool quote = true);
 	Q_INVOKABLE bool start();
@@ -67,7 +72,7 @@ public slots:
 protected:
 	bool _merge;
 	QProcess _pipe;
-	QString _cmd, _pipedata;
+	QString _cmd, _altCmd, _pipedata;
 	QStringList _args;
 };
 

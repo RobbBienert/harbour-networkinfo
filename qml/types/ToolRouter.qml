@@ -1,7 +1,7 @@
 /*
  * component for routing the various tools to the correct pages
  *
- * Copyright (C) 2017 Robert Bienert <robertbienert@gmx.net>
+ * Copyright (C) 2017 - 2018 Robert Bienert <robertbienert@gmx.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@ Button {
     property string tool: ''
     property string name: ''
     property var tools: []
+	property var altTools: []
     property bool isStatic: true
     property string toolOpt: ''
     property int iterations: 0
@@ -40,6 +41,7 @@ Button {
         else {
             qmlFile += 'Update'
             pageOpts.toolCmds = tools
+			pageOpts.altTools = altTools
             pageOpts.cmdOpt = toolOpt
             pageOpts.iterations = iterations
             pageOpts.iterName = iterName
