@@ -18,3 +18,7 @@ This app is published in binary format to
 
  * the Jolla harbour (access from the *Store* app on your mobile device)
  * [OpenRepos](https://openrepos.net/content/robbbienert/network-info)
+
+## Documentation
+
+Please see the [wiki](wiki/) for more.
